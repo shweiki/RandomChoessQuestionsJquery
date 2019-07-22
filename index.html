@@ -1,0 +1,292 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>اختيار نوع السؤال عشوائي</title>
+<style>
+  .container {
+            margin:  20px auto;
+        }
+.butn {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.butn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+h3 {
+  text-align: center;
+}
+html, body {
+  height: 100%;
+  font-family: arial;
+  background: #0B0F18
+}
+
+* { color: #fff }
+
+a, p, button { font-size: 16px; }
+
+.grid>* { padding: 10px }
+
+.rg_item {
+  border: 1px solid #555;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 1px 1px 6px 0 black
+}
+
+.rg_item-img {
+  height: auto;
+  width: 100%;
+  height: 50px
+}
+
+.rg_item-content { padding: 10px }
+
+
+body>a, body>button {
+  display: initial;
+  border-radius: 3px;
+  border: 1px solid #fff;
+  padding: 5px 15px;
+  text-decoration: none;
+  background: none;
+  box-shadow: 1px 1px 6px 0 black;
+  position: relative;
+  color: #fff;
+  z-index: 1;
+  transition: all 0.2s ease-in-out;
+  font-weight: 700;
+  cursor: pointer
+}
+
+body>a:after, body>button:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: white;
+  width: 25%;
+  height: 0;
+  transition: all 0.2s ease-in-out;
+  z-index: -1;
+  display: block
+}
+
+body>a:hover, body>button:hover { color: #000; }
+
+body>a:hover:after, body>button:hover:after {
+  width: 100%;
+  height: 100%;
+   text-align: center;
+   direction: rtl;
+}
+
+.rg_item {
+    float:left;
+    position:relative;
+    width:300px;
+}
+.rg_item-content {
+    position:absolute;
+    top:0;
+     display: block;
+  font-size: 1.17em;
+  margin-top: 0.4em;
+  margin-bottom: 1em;
+  margin-left: 45%;
+  margin-right: 0;
+  font-weight: bold;
+}
+</style>
+</head>
+<body style="text-align: center ">
+  
+  <div id="selected" class=" grid" style=" font-size: 2.0em;">
+    <div class="rg_item-img" style="background: #fff"></div>
+    <div class="rg_item-content">اسلامي</div>
+  </div>
+  <hr>
+  <div class="container">
+<h1>اختيار نوع السؤال عشوائي</h1>
+</div>
+<hr>
+
+<h2 id="headline-3">
+  
+    <button class="butn" onclick="stop()">اختيار</button>
+    <button class="butn" onclick="start()">بدء</button>
+</h2>
+<div class="container" id="grid-3">
+
+    <div class="rg_item">
+      <div class="rg_item-img" style="background: #F44336"></div>
+      <div class="rg_item-content">اسلامي</div>
+    </div>
+ 
+
+    <div class="rg_item">
+      <div class="rg_item-img" style="background: #F44336"></div>
+      <div class="rg_item-content">تاريخ</div>
+    </div>
+
+
+    <div class="rg_item">
+      <div class="rg_item-img" style="background: #F44336"></div>
+      <div class="rg_item-content">أدب</div>
+    </div>
+  
+
+    <div class="rg_item">
+      <div class="rg_item-img" style="background: #F44336"></div>
+      <div class="rg_item-content">علم</div>
+    </div>
+
+    <div class="rg_item">
+      <div class="rg_item-img" style="background: #F44336"></div>
+      <div class="rg_item-content">ثقافة</div>
+    </div>
+
+    <div class="rg_item">
+      <div class="rg_item-img" style="background: #F44336"></div>
+      <div class="rg_item-content">رياضة</div>
+    </div>
+
+    <div class="rg_item">
+      <div class="rg_item-img" style="background: #3F51B5"></div>
+      <div class="rg_item-content">اسلامي</div>
+    </div>
+
+    <div class="rg_item">
+      <div class="rg_item-img" style="background: #3F51B5"></div>
+      <div class="rg_item-content">تاريخ</div>
+    </div>
+
+    <div class="rg_item">
+      <div class="rg_item-img" style="background: #3F51B5"></div>
+      <div class="rg_item-content">أدب</div>
+    </div>
+
+    <div class="rg_item">
+      <div class="rg_item-img" style="background: #3F51B5"></div>
+      <div class="rg_item-content">علم</div>
+    </div>
+
+    <div class="rg_item">
+      <div class="rg_item-img" style="background: #3F51B5"></div>
+      <div class="rg_item-content">ثقافة</div>
+    </div>
+
+    <div class="rg_item">
+      <div class="rg_item-img" style="background: #3F51B5"></div>
+      <div class="rg_item-content">رياضة</div>
+    </div>
+
+    <div class="rg_item">
+      <div class="rg_item-img" style="background: #4CAF50"></div>
+      <div class="rg_item-content">اسلامي</div>
+    </div>
+
+    <div class="rg_item">
+      <div class="rg_item-img" style="background: #4CAF50"></div>
+      <div class="rg_item-content">تاريخ</div>
+    </div>
+
+    <div class="rg_item">
+      <div class="rg_item-img" style="background: #4CAF50"></div>
+      <div class="rg_item-content">أدب</div>
+    </div>
+
+    <div class="rg_item">
+      <div class="rg_item-img" style="background: #4CAF50"></div>
+      <div class="rg_item-content">علم</div>
+    </div>
+
+    <div class="rg_item">
+      <div class="rg_item-img" style="background: #4CAF50"></div>
+      <div class="rg_item-content">ثقافة</div>
+    </div>
+
+    <div class="rg_item">
+      <div class="rg_item-img" style="background: #4CAF50"></div>
+      <div class="rg_item-content">رياضة</div>
+    </div>
+
+    <div class="rg_item">
+      <div class="rg_item-img" style="background: #FF9800"></div>
+      <div class="rg_item-content">اسلامي</div>
+  </div>
+
+    <div class="rg_item">
+      <div class="rg_item-img" style="background: #FF9800"></div>
+      <div class="rg_item-content">تاريخ</div>
+    </div>
+
+    <div class="rg_item">
+      <div class="rg_item-img" style="background: #FF9800"></div>
+      <div class="rg_item-content">أدب</div>
+    </div>
+
+    <div class="rg_item">
+      <div class="rg_item-img" style="background: #FF9800"></div>
+      <div class="rg_item-content">علم</div>
+    </div>
+
+    <div class="rg_item">
+      <div class="rg_item-img" style="background: #FF9800"></div>
+      <div class="rg_item-content">ثقافة</div>
+    </div>
+
+    <div class="rg_item">
+      <div class="rg_item-img" style="background: #FF9800"></div>
+      <div class="rg_item-content">رياضة</div>
+    </div>
+</div>
+<script src="src/jquery-3.2.1.min.js" ></script>
+<script src="src/rdmgrid.js"></script> 
+<script>
+  var interval = null
+  	function stop() {
+  clearInterval(interval);
+  var selected = Choessselect[0].children
+ // $(selected).removeClass("rg_item").addClass("rg_itemse");
+  $("#selected").empty();
+      $("#selected").append(selected);
+}
+	function start(){
+	// Assigns a grid to a varable to trigger the shuffle function with a javascript call
+	var gridForLoop = $('#grid-3').rdmGrid();
+	 interval = setInterval(() => {
+		// trigger the shuffle function by javascript call
+		gridForLoop.trigger();
+  }, 500);
+}
+
+
+
+
+</script>
+
+</body>
+</html>
